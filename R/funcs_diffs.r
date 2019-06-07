@@ -10,7 +10,7 @@
 #' @param nx Number of dimension x discretization
 #' @param D Coefficient of diffusion. Must be constant value.
 #' @param C_ini Initial concentration value inside the slab.
-#' @param C_lim Vector with one or two elements. If there is only one element, the other side of the slab will be presented as having Neumann boundary condition with flux = 0. If there are two elements, the first element is the dirichlet concentration on the left side, while the second element is the dirichlet concentration on the right side.
+#' @param C_lim Boundary condition, written as a vector with one or two elements. If there is only one element, the other side of the slab will be presented as having Neumann boundary condition with flux = 0. If there are two elements, the first element is the dirichlet concentration on the left side, while the second element is the dirichlet concentration on the right side.
 #' @param Fin Final concentration value. In this case, it is the limiting condition coming from both sides of the slab, and diffusing into the slab.
 #'
 #' @return A matrix with {nx+1} number of row and {nt} number of column, profiling the diffusion on slab with Lx length along the time Tt.
@@ -134,5 +134,52 @@ diff.1D <- function(Lx,Tt,nt,nx,D,C_ini,C_lim){
     }
 
   return(Cmat_f)
+
+}
+
+#' Mean concentration values of one-dimensional diffusion during each time steps.
+#'
+#' @description A wrapper of \emph{diff.1D} function,
+#' returning the mean values of concentration during each
+#' time step of the diffusion.
+#'
+#' @usage diff.1D.Ct(Lx, Tt, nt, nx, D, C_ini, C_lim)
+#'
+#' @param Lx Total length of slab in x direction, usually in mm.
+#' @param Tt Total diffusion time, usually in second.
+#' @param nt Number of time discretization.
+#' @param nx Number of dimension x discretization
+#' @param D Coefficient of diffusion. Must be constant value.
+#' @param C_ini Initial concentration value inside the slab.
+#' @param C_lim Boundary condition, written as a vector with one or two elements. If there is only one element, the other side of the slab will be presented as having Neumann boundary condition with flux = 0. If there are two elements, the first element is the dirichlet concentration on the left side, while the second element is the dirichlet concentration on the right side.
+#' @param Fin Final concentration value. In this case, it is the limiting condition coming from both sides of the slab, and diffusing into the slab.
+#'
+#' @return A vector with \strong{nt} number of elements with the values of mean concentration in the slab for each T\emph{i}.
+#'
+#' @examples
+#' Lx <- 5 #Length of slab, in mm
+#' Tt <- 20 #Total measured diffusion time, in seconds
+#' nt <- 100 #Number of time discretization, wherein the Tt will be divided into 100 equal parts (0, 0.2, 0.4, ..., 20)
+#' nx <- 50 #Number of dimension discretization
+#' D <- 0.05 #Coefficient of diffusion in mm^2/s.
+#' C_ini <- 0.05 #Initial concentration inside the slab.
+#' C_lim <- c(0.10,0.25) #Dirichlet boundary concentration diffusing into the slab
+#' meanCt <- diff.1D.Ct(Lx, Tt, nt, nx, D, C_ini, C_lim)
+
+diff.1D.Ct <- function(Lx,Tt,nt,nx,D,C_ini,C_lim){
+
+  #Mean concentration value during each time step of 1-dimensional diffusion.
+
+  Cmat <- diff.1D(Lx,Tt,nt,nx,D,C_ini,C_lim)
+
+  Ct <- vector(mode="numeric", length = nt)
+
+  for (i in 1:nt) {
+
+    Ct[i] <- mean(Cmat[,i])
+
+  }
+
+  return(Ct)
 
 }

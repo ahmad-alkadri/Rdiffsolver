@@ -1,4 +1,4 @@
-#' Rdiffsolver: A simple package for solving diffusion equation.
+#' Rdiffsolver: A simple R package for solving diffusion equation with numerical methods.
 #'
 #' The \strong{Rdiffsolver} package provides currently one basic function:
 #' diff.1D, which can solve the diffusion equation in unidimensional

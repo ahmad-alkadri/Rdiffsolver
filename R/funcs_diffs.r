@@ -169,6 +169,7 @@ diff.1D <- function(Lx,Tt,nt,nx,D,C_ini,C_lim){
 diff.1D.Ct <- function(Lx,Tt,nt,nx,D,C_ini,C_lim){
 
   #Mean concentration value during each time step of 1-dimensional diffusion.
+  #Will be useful for plotting
 
   Cmat <- diff.1D(Lx,Tt,nt,nx,D,C_ini,C_lim)
 

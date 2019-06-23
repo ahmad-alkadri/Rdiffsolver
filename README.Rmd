@@ -1,3 +1,12 @@
+---
+title: "README"
+author: Ahmad Alkadri
+date: June 23, 2019
+output:
+  md_document:
+    variant: markdown_github
+---
+
 # **Rdiffsolver**
 
 Like its name implies, *Rdiffsolver* is an R package useful for solving the diffusion equation. It was originally written during the early stage of my Ph.D. year as a collection of MATLAB functions, all designed with a single goal in mind: to help me working with my Ph.D. thesis, which aims to characterize the vapor moisture transport in wood, in a manner as simple and as fast as possible.

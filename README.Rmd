@@ -3,6 +3,8 @@ title: "README"
 author: Ahmad Alkadri
 date: June 23, 2019
 output:
+  html_document:
+    keep_md: yes
   md_document:
     variant: markdown_github
 ---

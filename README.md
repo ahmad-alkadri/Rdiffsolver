@@ -3,10 +3,10 @@
 
 Like its name implies, *Rdiffsolver* is an R package useful for solving
 the diffusion equation. It was originally written during the early stage
-of my Ph.D. year as a collection of MATLAB functions, all designed with
-a single goal in mind: to help me working with my Ph.D. thesis, which
-aims to characterize the vapor moisture transport in wood, in a manner
-as simple and as fast as possible.
+of my Ph.D. as a collection of MATLAB functions, all designed with a
+single goal in mind: to help me working with my Ph.D. thesis, which aims
+to characterize the vapor moisture transport in wood, in a manner as
+simple and as fast as possible.
 
 Background
 ----------
@@ -17,7 +17,7 @@ constant coefficient of diffusion (*D*), rapidly with numerical method.
 A unidimensional diffusion can be expressed as the following partial
 differential equation:
 
-$$\\frac{dC}{dt}=\\frac{d}{dx}\\left(D\\frac{d}{dx}\\right) $$
+![equation](http://www.sciweavers.org/tex2img.php?eq=\frac%7BdC%7D%7Bdt%7D=\frac%7Bd%7D%7Bdx%7D\left(D\frac%7Bd%7D%7Bdx%7D\right)&bc=White&fc=Black&im=png&fs=18&ff=mathptmx&edit=0)
 
 where *x* is the direction of the diffusion (in this case, because it is
 unidimensional, we only use one axis, and in this case, *x*), *t* is the

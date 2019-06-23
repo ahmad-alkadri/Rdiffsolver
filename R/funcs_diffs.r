@@ -87,7 +87,7 @@ diff.1D <- function(Lx,Tt,nt,nx,D,C_ini,C_lim){
 
     } else {
 
-        print("Boundary condition: dirichlet in one side and newmann in another")
+        print("Boundary condition: dirichlet in one side and neumann in another")
 
         A[nx+1,nx] <- -2*s #For neumann boundary condition
 

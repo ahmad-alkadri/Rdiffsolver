@@ -14,7 +14,9 @@ Like its name implies, *Rdiffsolver* is an R package useful for solving the diff
 ## Background
 When I first wrote the functions that would become the basis for this package, my goal was simple: to solve unidimensional diffusion, with constant coefficient of diffusion (*D*), rapidly with numerical method. A unidimensional diffusion can be expressed as the following partial differential equation:
 
-![equation](http://bit.ly/2Ftm9m1)
+```{r}
+# dC/dt = d/dx(D*dC/dx)
+```
 
 where *x* is the direction of the diffusion (in this case, because it is unidimensional, we only use one axis, and in this case, *x*), *t* is the time, and *C* is the diffusing concentration.
 

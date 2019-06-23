@@ -17,7 +17,9 @@ constant coefficient of diffusion (*D*), rapidly with numerical method.
 A unidimensional diffusion can be expressed as the following partial
 differential equation:
 
-![equation](http://bit.ly/2Ftm9m1)
+``` r
+# dC/dt = d/dx(D*dC/dx)
+```
 
 where *x* is the direction of the diffusion (in this case, because it is
 unidimensional, we only use one axis, and in this case, *x*), *t* is the
@@ -96,7 +98,7 @@ plot(c(1:51),matC[,t_q/Tt*nt], xlab = "x", ylab = "Moisture concentration", ylim
 lines(c(1:51), matC[,t_q/Tt*nt])
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 ### Case 2: Dirichlet on one side, neumann with zero flow on another
 
@@ -139,7 +141,7 @@ plot(c(1:51),matK[,t_q/Tt*nt], xlab = "x", ylab = "Moisture concentration", ylim
 lines(c(1:51), matK[,t_q/Tt*nt])
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 Future Works
 ------------

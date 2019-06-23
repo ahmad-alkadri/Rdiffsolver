@@ -62,14 +62,13 @@ diffusion could happen except through the two faces parallel to each
 other.
 
 Let’s say the length of this slab, or the distance between the two
-parallel faces, is 5 *m**m*. We impose a moisture concentration on one
-face of the slab as 8%, and the other side as 15%. We measured the
-initial moisture concentration of the slab as 5%, and the coefficient of
-diffusion of the slab as 0.005 *m**m*<sup>2</sup>/*s*.
+parallel faces, is 5 mm. We impose a moisture concentration on one face
+of the slab as 8%, and the other side as 15%. We measured the initial
+moisture concentration of the slab as 5%, and the coefficient of
+diffusion of the slab as 0.005 mm^2/s.
 
 If we let the concentration from the side to diffuse into the slab for,
-let’s say, 10<sup>3</sup> *s*, what is the concentration profile in the
-100<sup>*t**h*</sup> second?
+let’s say, 1000 s, what is the concentration profile in the *t* = 100 s?
 
 **Answer:**
 
@@ -109,11 +108,10 @@ slab at that side.
 So now let’s suppose that, in this slab, the initial moisture
 concentration is 5% again. Now we impose a moisture concentration on the
 only open face of the slab as 12%. We’ll use the same coefficient of
-diffusion of the slab, which is 0.005 *m**m*<sup>2</sup>/*s*.
+diffusion of the slab, which is 0.005 mm^2/s.
 
 If we let the concentration from the side to diffuse into the slab for
-1000 *s* tpo, what is the concentration profile in the
-750<sup>*t**h*</sup> second?
+1000 s too, what is the concentration profile in the *t* = 750 s?
 
 **Answer:**
 

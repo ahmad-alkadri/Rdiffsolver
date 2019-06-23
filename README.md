@@ -17,7 +17,7 @@ constant coefficient of diffusion (*D*), rapidly with numerical method.
 A unidimensional diffusion can be expressed as the following partial
 differential equation:
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=\frac%7BdC%7D%7Bdt%7D=\frac%7Bd%7D%7Bdx%7D\left(D\frac%7Bd%7D%7Bdx%7D\right)&bc=White&fc=Black&im=png&fs=18&ff=mathptmx&edit=0)
+![equation](http://bit.ly/2Ftm9m1)
 
 where *x* is the direction of the diffusion (in this case, because it is
 unidimensional, we only use one axis, and in this case, *x*), *t* is the

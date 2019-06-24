@@ -38,9 +38,9 @@ Because I stressed on the simplicity and applicability, there are many limitatio
 ### Case 1: Dirichlet on both sides
 Let us have a wooden slab which sides, all of them except two facing parallel to each other, are insulated perfectly so that no kind of diffusion could happen except through the two faces parallel to each other. 
 
-Let's say the length of this slab, or the distance between the two parallel faces, is 5 mm. We impose a moisture concentration on one face of the slab as 8%, and the other side as 15%. We measured the initial moisture concentration of the slab as 5%, and the coefficient of diffusion of the slab as 0.005 mm^2/s.
+Let's say the length of this slab, or the distance between the two parallel faces, is 5 mm. We impose a moisture concentration on one face of the slab as 8%, and the other side as 15%. We measured the initial moisture concentration of the slab as 5%, and the coefficient of diffusion of the slab as 0.005 mm<sup>2</sup>/s.
 
-If we let the concentration from the side to diffuse into the slab for, let's say, 1000 s, what is the concentration profile in the *t* = 100 s?
+If we let the concentration from the side to diffuse into the slab for, let's say, 1000 s, what is the concentration profile at *t* = 100 s?
 
 **Answer:** 
 
@@ -75,9 +75,9 @@ lines(c(1:51), matC[,t_q/Tt*nt])
 ### Case 2: Dirichlet on one side, neumann with zero flow on another
 Now for the second case, let us take the previous slab, but now, instead of having two "open" sides, let's close one of them completely, seal it perfectly so there is no concentration exchange could occur from the slab at that side.
 
-So now let's suppose that, in this slab, the initial moisture concentration is 5% again. Now we impose a moisture concentration on the only open face of the slab as 12%. We'll use the same coefficient of diffusion of the slab, which is 0.005 mm^2/s.
+So now let's suppose that, in this slab, the initial moisture concentration is 5% again. Now we impose a moisture concentration on the only open face of the slab as 12%. We'll use the same coefficient of diffusion of the slab, which is 0.005 mm<sup>2</sup>/s.
 
-If we let the concentration from the side to diffuse into the slab for 1000 s too, what is the concentration profile in the *t* = 750 s?
+If we let the concentration from the side to diffuse into the slab for 1000 s too, what is the concentration profile at *t* = 750 s?
 
 **Answer:** 
 

@@ -407,8 +407,8 @@ $(document).ready(function () {
 <div id="case-1-dirichlet-on-both-sides" class="section level3">
 <h3>Case 1: Dirichlet on both sides</h3>
 <p>Let us have a wooden slab which sides, all of them except two facing parallel to each other, are insulated perfectly so that no kind of diffusion could happen except through the two faces parallel to each other.</p>
-<p>Let’s say the length of this slab, or the distance between the two parallel faces, is 5 mm. We impose a moisture concentration on one face of the slab as 8%, and the other side as 15%. We measured the initial moisture concentration of the slab as 5%, and the coefficient of diffusion of the slab as 0.005 mm^2/s.</p>
-<p>If we let the concentration from the side to diffuse into the slab for, let’s say, 1000 s, what is the concentration profile in the <em>t</em> = 100 s?</p>
+<p>Let’s say the length of this slab, or the distance between the two parallel faces, is 5 mm. We impose a moisture concentration on one face of the slab as 8%, and the other side as 15%. We measured the initial moisture concentration of the slab as 5%, and the coefficient of diffusion of the slab as 0.005 mm<sup>2</sup>/s.</p>
+<p>If we let the concentration from the side to diffuse into the slab for, let’s say, 1000 s, what is the concentration profile at <em>t</em> = 100 s?</p>
 <p><strong>Answer:</strong></p>
 <pre class="r"><code>library(Rdiffsolver)
 Lx &lt;- 5 #Length of the slab, in mm
@@ -432,8 +432,8 @@ lines(c(1:51), matC[,t_q/Tt*nt])</code></pre>
 <div id="case-2-dirichlet-on-one-side-neumann-with-zero-flow-on-another" class="section level3">
 <h3>Case 2: Dirichlet on one side, neumann with zero flow on another</h3>
 <p>Now for the second case, let us take the previous slab, but now, instead of having two “open” sides, let’s close one of them completely, seal it perfectly so there is no concentration exchange could occur from the slab at that side.</p>
-<p>So now let’s suppose that, in this slab, the initial moisture concentration is 5% again. Now we impose a moisture concentration on the only open face of the slab as 12%. We’ll use the same coefficient of diffusion of the slab, which is 0.005 mm^2/s.</p>
-<p>If we let the concentration from the side to diffuse into the slab for 1000 s too, what is the concentration profile in the <em>t</em> = 750 s?</p>
+<p>So now let’s suppose that, in this slab, the initial moisture concentration is 5% again. Now we impose a moisture concentration on the only open face of the slab as 12%. We’ll use the same coefficient of diffusion of the slab, which is 0.005 mm<sup>2</sup>/s.</p>
+<p>If we let the concentration from the side to diffuse into the slab for 1000 s too, what is the concentration profile at <em>t</em> = 750 s?</p>
 <p><strong>Answer:</strong></p>
 <pre class="r"><code>library(Rdiffsolver)
 Lx &lt;- 5 #Length of the slab, in mm

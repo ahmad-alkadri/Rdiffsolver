@@ -33,7 +33,7 @@ I've looked up to various different methods for doing that, and my first choice 
 + it is easy to reproduce the functions.
 
 ## Applications and Boundaries
-Because I stressed on the simplicity and applicability, there are many limitations in this package for now. The fonctions work if you want to solve a diffusion equation *in* a one-dimensional slab with a length ***L***. Further, I have only implemented in here two kinds of boundary conditions: dirichlet on both side and dirichlet one one side *and* neumann on another side with zero flows.
+Because I stressed on the simplicity and applicability, there are many limitations in this package for now. The fonctions work if you want to solve a diffusion equation *in* a one-dimensional slab with a length *L*. Further, I have only implemented in here two kinds of boundary conditions: dirichlet on both side and dirichlet one one side *and* neumann on another side with zero flows.
 
 ### Case 1: Dirichlet on both sides
 Let us have a wooden slab which sides, all of them except two facing parallel to each other, are insulated perfectly so that no kind of diffusion could happen except through the two faces parallel to each other. 

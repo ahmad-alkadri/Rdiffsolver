@@ -86,7 +86,7 @@ diff.1D.nm <- function(Lx,Tt,nt,nx,D,C_ini,C_lim){
   #Conditioning
   if(length(C_lim) == 2){
 
-    pb[1] <- s*C_right #Final, right side
+    b[1] <- s*C_right #Final, right side
 
     b[nx+1] <- s*C_left #Final, left side
 

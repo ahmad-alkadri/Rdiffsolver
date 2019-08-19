@@ -7,6 +7,8 @@ output: github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+[![Build Status](https://travis-ci.org/ahmad-alkadri/Rdiffsolver.svg?branch=master)](https://travis-ci.org/ahmad-alkadri/Rdiffsolver)
+
 Like its name implies, *Rdiffsolver* is an R package useful for solving the diffusion equation. It was originally written during the early stage of my Ph.D. as a collection of MATLAB functions, all designed with a single goal in mind: to help me working with my Ph.D. thesis, which aims to characterize the vapor moisture transport in wood, in a manner as simple and as fast as possible.
 
 ## Background

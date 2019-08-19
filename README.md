@@ -1,6 +1,9 @@
 Rdiffsolver
 ================
 
+[![Build
+Status](https://travis-ci.org/ahmad-alkadri/Rdiffsolver.svg?branch=master)](https://travis-ci.org/ahmad-alkadri/Rdiffsolver)
+
 Like its name implies, *Rdiffsolver* is an R package useful for solving
 the diffusion equation. It was originally written during the early stage
 of my Ph.D. as a collection of MATLAB functions, all designed with a

@@ -9,6 +9,7 @@ Maintainer: Ahmad Alkadri <ahmad.alkadri@outlook.com>
 Description: A simple numerical solver for diffusion equation.
     Current version (0.1.0) only support constant diffusion coefficient
     with implicit backward euler scheme.
+Imports: ggplot2,plotly
 License: MIT license
 Encoding: UTF-8
 LazyData: true

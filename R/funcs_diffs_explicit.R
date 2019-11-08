@@ -29,24 +29,24 @@
 #' profiling the diffusion on slab.
 #'
 #' @examples
-#' C_i = 0.00       # Initial concentration inside the slab
-#' C_f = 1.00			  # Final concentration coming from outside
-#' D = 10^-7				# Coefficient of diffusion, cm^2/s
-#' dt = 60			  	# difference between each time step
-#' l = 0.25				  # half-thickness of the slab, in cm
-#' F = 0.5			    # Fourier's mesh number
-#' T = 432000   		# Total measured time in seconds (~5 days)
-#' matC <- mdfexdiffu(D,dt,l,T,C_i,C_f,F)
+#' C_i = 0.00 # Initial concentration inside the slab
+#' C_f = 1.00	# Final concentration coming from outside
+#' D = 10^-7 # Coefficient of diffusion, cm^2/s
+#' dt = 60 # difference between each time step
+#' l = 0.25 # half-thickness of the slab, in cm
+#' F = 0.5 # Fourier's mesh number
+#' T = 432000 # Total measured time in seconds (~5 days)
+#' u <- mdfexdiffu(D,dt,l,T,C_i,C_f,F)
 #'
 #' # Using plotly for plotting a contour plot
 #' library(plotly)
 #'
-#' df.list <- list(x = seq(-l,l,length.out = ncol(matC)),
-#'                 y = seq(0,T,length.out = nrow(matC)),
-#'                 z = matC)
+#' df.list <- list(x = seq(-l,l,length.out = ncol(u)),
+#'                 y = seq(0,T,length.out = nrow(u)),
+#'                 z = u)
 #'
 #' plot_ly() %>%
-#'     add_contour(x = df.list$y, y = df.list$x, z = matC) %>%
+#'     add_contour(x = df.list$x, y = df.list$y, z = df.list$z) %>%
 #'     layout(title = "Contour plot diffusion",
 #'            xaxis = list(title = "x"),
 #'            yaxis = list(title = "t (s)"))

@@ -1,7 +1,7 @@
 Package: Rdiffsolver
 Type: Package
 Title: A simple R package for solving diffusion equation with numerical methods.
-Version: 0.1.0
+Version: 0.1.1
 Author: person("Ahmad","Alkadri", 
                email = "ahmad.alkadri@outlook.com",
                role = c("aut","cre"))

@@ -17,11 +17,7 @@ vectInterp(vect1, vect2, dist)
 A vector with interpolated values between the first and the second vectors.
 }
 \description{
-<<<<<<< HEAD
-A wrapper of \emph{diff_1D} function,
-=======
 A wrapper of \emph{diff.1D} function,
->>>>>>> master
 returning the mean values of concentration during each
 time step of the diffusion.
 }

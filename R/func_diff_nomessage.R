@@ -7,7 +7,7 @@
 #' c) the boundary conditions are constant.
 #' The only difference between this function and the diff.1D() is that this one does not return any messages with notice about the boundary conditions at the end.
 #'
-#' @usage diff.1D.nm(Lx, Tt, nt, nx, D, C_ini, C_lim)
+#' @usage diff_1D_nm(Lx, Tt, nt, nx, D, C_ini, C_lim)
 #'
 #' @param Lx Total length of slab in x direction, usually in mm.
 #' @param Tt Total diffusion time, usually in second.
@@ -18,7 +18,6 @@
 #' @param C_lim Boundary condition, written as a vector with one or two elements.
 #' If there is only one element, the other side of the slab will be presented as having Neumann boundary condition with flux = 0.
 #' If there are two elements, the first element is the dirichlet concentration on the left side, while the second element is the dirichlet concentration on the right side.
-#' @param Fin Final concentration value. In this case, it is the limiting condition coming from both sides of the slab, and diffusing into the slab.
 #'
 #' @return A matrix with {nx+1} number of row and {nt} number of column, profiling the diffusion on slab with Lx length along the time Tt.
 #'
@@ -30,9 +29,9 @@
 #' D <- 0.05 #Coefficient of diffusion in mm^2/s.
 #' C_ini <- 0.05 #Initial concentration inside the slab.
 #' C_lim <- c(0.10,0.25) #Dirichlet boundary concentration diffusing into the slab
-#' matC <- diff.1D.nm(Lx, Tt, nt, nx, D, C_ini, C_lim)
+#' matC <- diff_1D_nm(Lx, Tt, nt, nx, D, C_ini, C_lim)
 
-diff.1D.nm <- function(Lx,Tt,nt,nx,D,C_ini,C_lim){
+diff_1D_nm <- function(Lx,Tt,nt,nx,D,C_ini,C_lim){
 
   #1-Dimensional diffusion solver using implicit method, with border condition on its two extremities/sides
 

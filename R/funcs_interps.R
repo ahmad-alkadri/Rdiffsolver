@@ -1,10 +1,6 @@
 #' Interpolating the values between two vectors.
 #'
-<<<<<<< HEAD
-#' @description A wrapper of \emph{diff_1D} function,
-=======
 #' @description A wrapper of \emph{diff.1D} function,
->>>>>>> master
 #' returning the mean values of concentration during each
 #' time step of the diffusion.
 #'

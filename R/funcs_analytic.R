@@ -6,7 +6,7 @@
 #' or only along one axis, b) the coefficient of diffusion is constant,
 #' and c) the boundary conditions are constant.
 #'
-#' @usage crankdiffu(C_i,C_f,D,l,xreq,treq,N=2)
+#' @usage analyticdiffu(C_i,C_f,D,l,xreq,treq,N=2)
 #'
 #' @param D coefficient of diffusion, constant
 #' @param l half-length of the slab, usually in cm
@@ -36,7 +36,7 @@
 #' treq = 1e5 # time in s
 #' xreq = 0 # point space
 #' N = 2 # number of series, thus sum from n=0 to n=N-1
-#' u <- crankdiffu(C_i,C_f,D,l,xreq,treq,N)
+#' u <- analyticdiffu(C_i,C_f,D,l,xreq,treq,N)
 #'
 #' #2nd Example: comparison with finite difference, explicit method ----
 #'
@@ -50,16 +50,16 @@
 #' F = 0.5 # Fourier's mesh number
 #' T = 432000 # Total calculated time of diffusion in seconds (~5 days)
 #'
-#' N_crank <- c(2,5,10,25)
-#' u_crank <- matrix(0,
-#'                  nrow = length(N_crank),
+#' N_analytic <- c(2,5,10,25)
+#' u_analytic <- matrix(0,
+#'                  nrow = length(N_analytic),
 #'                  ncol = length(xreq))
 
 #'## Analytical (Crank) method
-#'for (i in 1:length(N_crank)) {
+#'for (i in 1:length(N_analytic)) {
 #'  for (j in 1:length(xreq)) {
-#'    u_crank[i,j] <- crankdiffu(C_i,C_f,D,l,x=xreq[j],
-#'                               t=treq,N=N_crank[i])
+#'    u_analytic[i,j] <- analyticdiffu(C_i,C_f,D,l,x=xreq[j],
+#'                               t=treq,N=N_analytic[i])
 #'  }
 #'}
 #'
@@ -68,17 +68,17 @@
 #'
 #'## Plot
 #'par(mfrow=c(2,2))
-#'for (i in 1:nrow(u_crank)) {
+#'for (i in 1:nrow(u_analytic)) {
 #'  plot(xreq,u_diffex,
 #'       xlab=bquote(italic(x)),
 #'       ylab=bquote((c-c[i])/(c[f]-c[i])),
-#'       main = bquote(t~"="~.(treq)~s*","~N~"="~.(N_crank[i])),
-#'       ylim = c(min(u_crank),1),
+#'       main = bquote(t~"="~.(treq)~s*","~N~"="~.(N_analytic[i])),
+#'       ylim = c(min(u_analytic),1),
 #'       type = "l")
-#'  points(xreq,u_crank[i,],pch = i)
+#'  points(xreq,u_analytic[i,],pch = i)
 #'}
 
-crankdiffu <- function(C_i,C_f,D,l,xreq,treq,N=2){
+analyticdiffu <- function(C_i,C_f,D,l,xreq,treq,N=2){
 
   x <- xreq
   t <- treq

@@ -51,7 +51,7 @@
 #'            xaxis = list(title = "x"),
 #'            yaxis = list(title = "t (s)"))
 
-mdfexdiffu <- function(D,dt,l,T,C_i=0,C_f=1,F=0.5){
+mdfexdiffulibre <- function(D,dt,dx,l,T,C_i=0,C_f=1){
 
   if(length(C_f) > 2){
     stop("ERROR: C_f must consist of maximum 2 elements")

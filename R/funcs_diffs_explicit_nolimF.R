@@ -1,4 +1,5 @@
-#' 1D diffusion, boundary constant, FD explicit
+#' 1D diffusion, boundary constant, FD explicit,
+#' unbounded by F
 #'
 #' @description Function to solve diffusion equation
 #' using finite difference method, forward euler or

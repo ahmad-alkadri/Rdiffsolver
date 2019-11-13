@@ -7,7 +7,7 @@
 #' or only along one axis, b) the coefficient of diffusion is constant,
 #' and c) the boundary conditions are constant.
 #'
-#' @usage mdfexdiffu(D,dt,l,T,C_i=0,C_f=1,F=0.5)
+#' @usage mdfexdiffulibre(D,dt,dx,l,T,C_i=0,C_f=1)
 #'
 #' @param D Coefficient of diffusion, constant
 #' @param dt different between each time steps
@@ -36,7 +36,7 @@
 #' l = 0.25 # half-thickness of the slab, in cm
 #' F = 0.5 # Fourier's mesh number
 #' T = 432000 # Total measured time in seconds (~5 days)
-#' u <- mdfexdiffu(D,dt,l,T,C_i,C_f,F)
+#' u <- mdfexdiffulibre(D,dt,dx,l,T,C_i,C_f)
 #'
 #' # Using plotly for plotting a contour plot
 #' library(plotly)

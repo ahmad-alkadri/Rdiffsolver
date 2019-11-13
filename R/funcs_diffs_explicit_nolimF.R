@@ -61,7 +61,7 @@ mdfexdiffu <- function(D,dt,l,T,C_i=0,C_f=1,F=0.5){
   Nt = round(T/dt,0)
   # Mesh point in time
   t = seq(0, Nt*dt, length.out=Nt)
-  dx = sqrt(D*dt/F)
+  F = D*dt/dx^2
   Nx = round(L/dx,0)
   # Mesh point in space
   x = seq(0,L,length.out=Nx)

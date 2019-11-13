@@ -12,6 +12,7 @@
 #'
 #' @param D Coefficient of diffusion, constant
 #' @param dt different between each time steps
+#' @param dx different between each space (x) steps
 #' @param l half-length of the slab, usually in cm
 #' @param T Total calculated diffusion time
 #' @param C_i Initial concentration value inside the slab
@@ -22,11 +23,9 @@
 #' the same C_f. If there are
 #' two elements, the first element (C_f[1]) will be on
 #' x = -l while the second one will be on x = l.
-#' @param F Fourier's mesh number, should be less than or equal to 0.5
-#' to make sure that the solution is stable
 #'
 #' @return A matrix with {round(T/dt,0)} number of row and
-#' {round(L/(sqrt(D*dt/F)),0)} number of column,
+#' {round(L/dx,0)} number of column,
 #' profiling the diffusion on slab.
 #'
 #' @examples
@@ -34,8 +33,8 @@
 #' C_f = 1.00	# Final concentration coming from outside
 #' D = 10^-7 # Coefficient of diffusion, cm^2/s
 #' dt = 60 # difference between each time step
+#' dx = 0.01 # space step in cm
 #' l = 0.25 # half-thickness of the slab, in cm
-#' F = 0.5 # Fourier's mesh number
 #' T = 432000 # Total measured time in seconds (~5 days)
 #' u <- mdfexdiffulibre(D,dt,dx,l,T,C_i,C_f)
 #'

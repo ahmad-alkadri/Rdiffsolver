@@ -66,39 +66,41 @@ mdfimpdiffu <- function(D,Nx,Nt,l,T,C_i=0,C_f=1){
   dt = t[2]-t[1]
   # F
   F = D*dt/(dx^2)
-  
-  # Structures for the linear system
-  A = matrix(0, nrow = Nx+1, ncol = Nx+1)
 
-  for(i in 2:Nx){
-     A[i,i-1] = -F
-     A[i,i+1] = -F
-     A[i,i] = 1+2*F
+  # Structures for the linear system
+  A = matrix(0, nrow = Nx, ncol = Nx)
+
+  for(i in 2:Nx-1){
+    A[i,i-1] = -F
+    A[i,i+1] = -F
+    A[i,i] = 1+2*F
   }
 
   # Boundary condition
   A[1,1] = 1
-  A[Nx+1,Nx+1] = 1
+  A[1,2] = 0
+  A[Nx,Nx] = 1
+  A[Nx,Nx-1] = 0
 
   # Empty matrix for u and u_n
-  u = matrix(0, nrow = Nx+1, ncol = Nt+1)
+  u = matrix(0, nrow = Nx, ncol = Nt)
   # Boundary condition on the borders
   u[1,] = C_f[1]
-  u[Nx+1,] = C_f[length(C_f)]
+  u[Nx,] = C_f[length(C_f)]
   # Initial condition
-  u[2:Nx,] = C_i
+  u[2:(Nx-1),] = C_i
 
   # Compute
-  for(n in 2:Nt+1){
-     u_n = u[,n-1]
-     b = matrix(0, nrow = Nx+1, ncol = 1)
-     b[2:Nx] = u_n[2:Nx]
-     b[1] = C_f
-     b[Nx+1] = C_f[length(C_f)]
-     ui = solve(A,b)
-     u[,n] = ui
+  for(n in 2:Nt){
+    u_n = u[,n-1]
+    b = matrix(0, nrow = Nx, ncol = 1)
+    b[2:(Nx-1)] = u_n[2:(Nx-1)]
+    b[1] = C_f
+    b[Nx] = C_f[length(C_f)]
+    ui = solve(A,b)
+    u[,n] = ui
   }
-  
+
   u = t(u)
 
   return(u)

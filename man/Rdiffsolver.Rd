@@ -3,7 +3,6 @@
 \docType{package}
 \name{Rdiffsolver}
 \alias{Rdiffsolver}
-\alias{Rdiffsolver-package}
 \title{Rdiffsolver: A simple R package for solving diffusion equation with numerical methods.}
 \description{
 The \strong{Rdiffsolver} package provides currently one basic function:

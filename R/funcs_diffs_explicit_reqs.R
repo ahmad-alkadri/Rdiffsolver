@@ -244,6 +244,7 @@ mdfexdiffxreq <- function(D,dt,l,xreq,T,C_i=0,C_f=1,F=0.5){
 #' to make sure that the solution is stable
 #'
 #' @return A matrix with {round(T/dt,0)} number of row and
+#' @return A matrix with {length(treq)} number of row and
 #' {length(xreq)} number of column,
 #' profiling the diffusion in the slab for the requested
 #' x points.

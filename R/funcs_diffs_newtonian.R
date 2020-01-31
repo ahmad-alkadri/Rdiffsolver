@@ -108,11 +108,9 @@ mdfnewtondiffu <- function(Nt,Nx,T,C_f,C_i,l,Dfunstr){
         dfun = eval(parse(text = Dfunstr))
         k = dfun(c=u[i])
         Dk = pracma::fderiv(dfun,
-                            u[i], n=1,
-                            method = "backward")
+                            u[i], n=1)
         D2k = pracma::fderiv(dfun,
-                             u[i], n=2,
-                             method = "backward")
+                             u[i], n=2)
         v = (u[i+1]-u[i-1])/(2*h)
         A = 1/tau
         phi = A*(u[i]-u_1[i])-Dk*v*v
